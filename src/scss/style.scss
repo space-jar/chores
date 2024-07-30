@@ -1,0 +1,98 @@
+#chart-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    font-family: "Candara", sans-serif;
+}
+
+.chart-header {
+    width: 100%;
+    text-align: center;
+}
+
+.chart-content {
+    display: grid;
+    grid-template-columns: 2fr repeat(7, 1fr);
+    grid-auto-rows: 1fr;
+
+    > div {
+        padding: 0.625rem;
+        border: 1px solid black;
+    }
+
+    .full-row {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.chore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.125rem;
+    
+    .points {
+        width: 29px;
+        height: 26px;
+        padding-bottom: 3px;
+        border-radius: 0.25rem;
+        background: goldenrod;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+
+        &.lots {
+            font-size: 1.25rem;
+            box-shadow: 3px 3px gold;
+        }
+    }
+}
+
+.filled {
+    //background-color: gray;
+    //color: white;
+    
+    background: repeating-linear-gradient(
+        45deg,
+        darkgreen,
+        darkgreen 10px,
+        green 10px,
+        green 20px
+    );
+}
+
+.morning, .afternoon, .night {
+    font-family: "Jokerman";
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+}
+
+.morning {
+    background-color: skyblue;
+}
+
+.afternoon {
+    background-color: khaki;
+}
+
+.night {
+    background-color: midnightblue;
+    color: white;
+}
+
+.multiplier {
+    background: rgb(216, 229, 240);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}

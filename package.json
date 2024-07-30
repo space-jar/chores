@@ -1,0 +1,35 @@
+{
+  "name": "chores",
+  "version": "1.0.0",
+  "description": "chore charts for the kids",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "build": "webpack",
+    "compile:scss": "sass src/scss/style.scss dist/styles.css"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/space-jar/chores.git"
+  },
+  "author": "space-jar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/space-jar/chores/issues"
+  },
+  "homepage": "https://github.com/space-jar/chores#readme",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "node-sass": "^9.0.0",
+    "sass": "^1.77.8",
+    "sass-loader": "^16.0.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}
