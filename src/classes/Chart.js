@@ -25,6 +25,14 @@ export class Chart {
         }
     }
 
+    addChores(chores) {
+        if (Array.isArray(chores)) {
+            this.chores = [...this.chores, ...chores];
+        } else {
+            console.error('Invalid chores. Must be an array of Chore instances.');
+        }
+    }
+
     render() {
         let html = `
             <div class="chart-header">
