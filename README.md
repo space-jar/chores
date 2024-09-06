@@ -6,6 +6,12 @@ Chores
 
 Making chore charts for the kids, the hard way
 
+## Tech
+- Node.js 20.17.0
+- npm - Node package manager
+- webpack - bundler & sass transpiler
+- webpack-dev-server - http server
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -13,21 +19,18 @@ Making chore charts for the kids, the hard way
 
 ## Installation
 
-Install dart sass: https://sass-lang.com/install/
-(I installed it globally so I could use it from command line w/o manually updating PATH.)
+Clone repository.
+
+Install dependencies:
 ```shell
-npm i sass -g
+npm install
 ```
 
 ## Usage
 
-Just open `chart.html` in a browser and print.
-
-### Transpile SCSS
-Use dart sass cli: https://sass-lang.com/documentation/cli/dart-sass/
+### Start development server
 ```shell
-sass <input.scss> [output.css] -w
+npm run start
 ```
 
-`-w` is short for `--watch`: https://sass-lang.com/documentation/cli/dart-sass/#watch
->Sass stays open and continues compiling stylesheets whenever they or their dependencies change.
+Click the `chart.html` link to view the output chore chart
