@@ -2,7 +2,20 @@ import { Chore } from './Chore';
 
 export class Chart {
     DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-    TIMES = ['Morning', 'Afternoon', 'Night'];
+    TIMES = [
+        {
+            name: 'Morning',
+            img: 'img/morning.png'
+        },
+        {
+            name: 'Afternoon',
+            img: 'img/afternoon.png'
+        },
+        { 
+            name: 'Night',
+            img: 'img/night.png'
+        }
+    ];
 
     constructor() {
         this.heading;
@@ -40,8 +53,8 @@ export class Chart {
             </div>
             <div class="chart-content">
                 <div class="points-container">
-                    <div class="points">Points: </div>
-                    <div class="high-score">High Score: </div>
+                    <div class="points">Points: <span>490</span></div>
+                    <div class="high-score">High Score: <span>490</span></div>
                 </div>
         `;
 
@@ -53,10 +66,13 @@ export class Chart {
         // Render each time of day and any chores that are scheduled for that time
         if (this.chores.length > 0) {
             this.TIMES.forEach(time => {
-                var chores = this.chores.filter(chore => chore.time === time);
+                var chores = this.chores.filter(chore => chore.time === time.name);
 
                 if (chores.length) {
-                    html += `<div class="${time.toLowerCase()} full-row">${time}</div>`;
+                    html += `<div class="${time.name.toLowerCase()} full-row">
+                                <img src=${time.img}>
+                                ${time.name}
+                            </div>`;
 
                     chores.forEach(chore => {
                         html += chore.render(); // Render the chore and add to HTML
