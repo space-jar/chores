@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/space-jar/chores#readme",
   "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
     "node-sass": "^9.0.0",
